@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background-color: linear-gradient(180deg, #222831, #393E46);
+    --background-btn: linear-gradient(180deg, #FFD369, #ff9469);
+
+    --darker-color: #222831;
+    --dark-color: #393E46;
+    --yellow-color: #FFD369;
+    --lighter-color: #EEEEEE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color);
+}
+
+.rule-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--darker-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    gap: 2rem;
+    width: 350px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+}
+
+.rule-box > span {
+    color: var(--lighter-color);
+    font-size: 1.5rem;
+    background-color: var(--dark-color);
+    border-radius: 7px;
+    width: 100%;
+    padding: .25rem 0;
+    text-align: center;
+    font-weight: 600;
+    user-select: none;
+}
+
+.rule-box h1 {
+    color: var(--lighter-color);
+    user-select: none;
+}
+
+.input-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: var(--dark-color);
+    height: 1.5rem;
+}
+
+.input-field span {
+    color: var(--lighter-color);
+    font-weight: 600;
+    user-select: none;
+}
+
+.input-field input {
+    width: 40%;
+    padding: .5rem 0;
+    border-radius: 7px;
+    text-align: center;
+    border: 1px solid var(--yellow-color);
+    background: var(--dark-color);
+    color: var(--lighter-color);
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.rule-box button {
+    width: 100%;
+    padding: .5rem 0;
+    border: none;
+    border-radius: 7px;
+    background: var(--background-btn);
+    color: var(--lighter-color);
+    font-weight: 600;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.rule-box button:hover {
+    transform: scale(1.05);
+}
+
+.rule-box button:active {
+    transform: scale(1);
+}
+
+.input-field .result {
+    background: var(--background-btn);
+    user-select: none;
+    width: 40%;
+    text-align: center;
+    padding: .5rem;
+    font-weight: 600;
+    border-radius: 7px;
+    color: var(--lighter-color);
+    cursor: pointer;
+}
+
+.input-field .result:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 576px) {
+    .rule-box {
+        height: 100vh;
+        width: 100%;
+        padding: 3.5rem;
+    }
+}
